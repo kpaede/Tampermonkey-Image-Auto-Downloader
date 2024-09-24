@@ -1,5 +1,36 @@
 # Tampermonkey-Image-Auto-Downloader
-A script to download images automatically from Websites
+This Tampermonkey script automatically downloads all JPG images from a Website as you browse, using the original filenames.
+
+*Installation*
+Install Tampermonkey Extension
+
+Download and install the Tampermonkey extension for your browser. Create a New Script.
+
+Click on the Tampermonkey icon in your browser toolbar.
+Select "Create a new script..." from the dropdown menu.
+Add the Script Code
+
+Remove any placeholder code in the editor.
+
+Paste the following script code into the editor:
+
+*Browser Configuration*
+To ensure images are downloaded automatically without prompts, adjust your browser settings:
+
+Chrome
+Turn Off "Ask where to save each file before downloading"
+
+Navigate to chrome://settings/downloads.
+Toggle off "Ask where to save each file before downloading".
+Allow Automatic Downloads
+
+Go to chrome://settings/content/automaticDownloads.
+Under "Customized behaviors", click "Add" next to "Allowed to automatically download multiple files".
+Enter https://dramaturgie.lol and click "Add".
+
+*Legal Considerations*
+Ensure that downloading images complies with the website's terms of service and applicable laws.
+
 
 ```// ==UserScript==
 // @name         Auto-Download JPGs Including Viewer Content
