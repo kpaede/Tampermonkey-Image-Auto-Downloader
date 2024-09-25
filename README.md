@@ -33,6 +33,7 @@ Ensure that downloading images complies with the website's terms of service and 
 
 
 ```// ==UserScript==
+// ==UserScript==
 // @name         Auto-Download JPGs Including Viewer Content
 // @namespace    http://tampermonkey.net/
 // @version      2.2
@@ -60,8 +61,9 @@ Ensure that downloading images complies with the website's terms of service and 
     })(XMLHttpRequest.prototype.open);
 
     (function(fetch) {
+        const originalFetch = fetch;
         window.fetch = function() {
-            const promise = fetch.apply(this, arguments);
+            const promise = originalFetch.apply(this, arguments);
             promise.then(response => {
                 if (response.url) {
                     handleNetworkRequest(response.url);
@@ -267,4 +269,5 @@ Ensure that downloading images complies with the website's terms of service and 
     // (Already included at the top of the script)
 
 })();
+
 ```
